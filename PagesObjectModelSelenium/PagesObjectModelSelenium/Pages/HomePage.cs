@@ -13,6 +13,7 @@ namespace PagesObjectModelSelenium.Pages
     {
         private readonly By _loginInput = By.Id("mat-input-0");
         private readonly By _rowContainer = By.ClassName("ag-center-cols-container");
+        private readonly By _addUserButton = By.CssSelector("mdc-button.mat-mdc-button-base.web-component.inka-ui-button.inka-ui-button__full-width mdc-button--unelevated.mat-mdc-unelevated-button.mat-primary");
 
 
         public HomePage(IWebDriver driver) : base(driver)
@@ -40,7 +41,10 @@ namespace PagesObjectModelSelenium.Pages
             SetLogin(login);
         }
 
-
+        public void ClicklAddUserButton()
+        {
+            Click(_loginInput);
+        }
 
         public int GetRowCount() {
             var childElements =  GetChildElements(_rowContainer);

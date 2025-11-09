@@ -11,6 +11,7 @@ namespace PagesObjectModelSelenium.Tests
         public void Before()
         {
             _loginPage = new LoginPage(Driver);
+
         }
 
         [Test(Description = "Verify that a user can login to the application with valid credentials")]

@@ -26,5 +26,7 @@ namespace PagesObjectModelSelenium.Tests
             var rowsCount = _homePage.GetRowCount();
             Assert.That(rowsCount,Is.EqualTo(expectedValue));
         }
+
+
     }
 }
