@@ -14,16 +14,18 @@ namespace PagesObjectModelSelenium.Tests
         }
 
         [Test(Description = "Verify that a user can login to the application with valid credentials")]
-        public void TestValidUserLogin()
+        [TestCase("admin","admin")]
+        public void TestValidUserLogin(string login, string password)
         {
-            _loginPage.Login("admin","admin");
-            Assert.That("ИНКА 4.0", Is.EqualTo(Driver.Title));
+            _loginPage.Login(login,password);
+            Assert.That("Заголовок формы", Is.EqualTo(Driver.Title));
         }
 
         [Test(Description = "Verify that a user cannot login to the application with invalid credentials")]
-        public void TestInvalidUserLogin()
+        [TestCase("test","test")]
+        public void TestInvalidUserLogin(string login,string password)
         {
-            _loginPage.Login("test","test");
+            _loginPage.Login(login,password);
             Assert.That("Sign in to stage",Is.EqualTo(Driver.Title));
         }
     }

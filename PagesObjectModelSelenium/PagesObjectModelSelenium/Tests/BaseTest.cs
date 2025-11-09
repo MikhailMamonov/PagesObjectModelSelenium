@@ -16,7 +16,6 @@ namespace PagesObjectModelSelenium.Tests
         public void SetUp()
         {
             Driver = new ChromeDriver();
-            Driver.Manage().Window.Maximize();
             Driver.Navigate().GoToUrl(_baseUrl);
         }
 

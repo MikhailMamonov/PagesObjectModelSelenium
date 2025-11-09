@@ -1,12 +1,4 @@
-﻿using OpenQA.Selenium;
-
-using PagesObjectModelSelenium.Pages;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PagesObjectModelSelenium.Pages;
 
 namespace PagesObjectModelSelenium.Tests
 {
@@ -34,11 +26,5 @@ namespace PagesObjectModelSelenium.Tests
             var rowsCount = _homePage.GetRowCount();
             Assert.That(rowsCount,Is.EqualTo(expectedValue));
         }
-
-        //[Test(Description = "Verify that a user cannot login to the application with invalid credentials")]
-        //public void TestInvalidUserLogin()
-        //{
-            
-        //}
     }
 }

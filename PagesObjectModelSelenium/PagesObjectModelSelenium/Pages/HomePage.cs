@@ -29,11 +29,18 @@ namespace PagesObjectModelSelenium.Pages
             Click(_loginInput);
         }
 
+        public void DoubleClicklNameField()
+        {
+            DoubleClick(_loginInput);
+        }
+
         public void ChangeTextInLoginFilterField(string login)
         {
             ClicklLoginInputField();
             SetLogin(login);
         }
+
+
 
         public int GetRowCount() {
             var childElements =  GetChildElements(_rowContainer);
